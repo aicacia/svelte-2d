@@ -1,0 +1,18 @@
+{
+	"name": "Svelte 2D",
+	"short_name": "Svelte 2D",
+	"description": "Svelte 2D",
+	"version": "1.0",
+	"manifest_version": 3,
+	"icons": [
+		{
+			"src": "/svelte-2d/favicon.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		}
+	],
+	"start_url": "/svelte-2d",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#07689f"
+}
