@@ -1,4 +1,3 @@
-import path from 'path';
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 
@@ -18,13 +17,6 @@ const config = {
 		},
 		prerender: {
 			default: true
-		},
-		vite: {
-			resolve: {
-				alias: {
-					'svelte-2d': path.resolve('src/lib')
-				}
-			}
 		}
 	}
 };

@@ -52,8 +52,6 @@
 	$: y = -position[1];
 	$: w = $width;
 	$: h = $height;
-
-	$: console.log(position);
 </script>
 
 <defs>
