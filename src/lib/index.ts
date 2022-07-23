@@ -1,0 +1,10 @@
+export { default as Scene, onUpdate } from '$lib/components/Scene.svelte';
+export { default as Entity } from '$lib/components/Entity.svelte';
+export { default as Grid } from '$lib/components/grid/Grid.svelte';
+export { default as Line } from '$lib/components/Line.svelte';
+export { default as Ellipse } from '$lib/components/Ellipse.svelte';
+export { default as MovablePoint } from '$lib/components/MovablePoint.svelte';
+export { default as Circle } from '$lib/components/Circle.svelte';
+export { default as Rectangle } from '$lib/components/Rectangle.svelte';
+export { default as Polygon } from '$lib/components/Polygon.svelte';
+export { Transform } from './Transform';
