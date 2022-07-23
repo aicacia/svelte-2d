@@ -35,16 +35,17 @@
 	export const MAP_Y = createContextKey<(y: number) => number>();
 	export const OFFSET = createContextKey<vec2>();
 
-	export const UPDATES_KEY = createContextKey<((ms: number) => void)[]>();
+	export type IUpdateFn = (ms: number) => void;
+	export const UPDATES_KEY = createContextKey<IUpdateFn[]>();
 
-	export function onUpdate(fn: (ms: number) => void) {
-		const updates = getContext<((ms: number) => void)[]>(UPDATES_KEY);
+	export function onUpdate(fn: IUpdateFn) {
+		const updates = getContext<IUpdateFn[]>(UPDATES_KEY);
 
 		updates.push(fn);
 
 		onDestroy(() => {
 			const index = updates.indexOf(fn);
-			if (index >= 0) {
+			if (index !== -1) {
 				updates.splice(index, 1);
 			}
 		});
@@ -116,7 +117,7 @@
 
 	$: cssScale = `scale(${scaleX(1)} ${scaleY(1)})`;
 
-	const updates: Array<(ms: number) => void> = [];
+	const updates: Array<IUpdateFn> = [];
 	let frame: number;
 	function onUpdateHandler(ms: number) {
 		for (const update of updates) {
