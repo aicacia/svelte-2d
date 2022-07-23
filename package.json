@@ -7,7 +7,7 @@
 		"svelte-kit": "svelte-kit",
 		"vite": "vite",
 		"start": "vite dev --host --open",
-		"build": "vite build",
+		"build": "svelte-kit sync && vite build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
 		"clean": "rm -rf .svelte-kit build node_modules/.vite",
@@ -16,7 +16,7 @@
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
 		"preCommit": "npm run format && npm run lint",
-		"prepare": "husky install"
+		"prepare": "husky install && svelte-kit sync"
 	},
 	"husky": {
 		"hooks": {
