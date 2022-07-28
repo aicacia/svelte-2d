@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { getFromContext } from '$lib/context';
-	import { vec2 } from 'gl-matrix';
+	import { Transform } from '$lib/Transform';
+	import { mat2d, vec2 } from 'gl-matrix';
+	import { PARENT } from './Entity.svelte';
 	import Path from './Path.svelte';
 	import { MAX, MIN, ZOOM_AMOUNT } from './Scene.svelte';
 
@@ -11,13 +13,16 @@
 	export let color = '#000';
 	export let fill = 'none';
 
+	const transform = getFromContext(PARENT);
 	const min = getFromContext(MIN);
 	const max = getFromContext(MAX);
 	const zoomAmount = getFromContext(ZOOM_AMOUNT);
 
-	$: minX = $min[0];
-	$: maxX = $max[0];
-	$: step = ($zoomAmount / 2) * 0.1;
+	let matrix = mat2d.create();
+	$: matrix = Transform.getMatrix(matrix, $transform);
+	$: minX = -matrix[4] + $min[0];
+	$: maxX = -matrix[4] + $max[0];
+	$: step = ($zoomAmount / 2) * 0.05;
 
 	let path: vec2[] = [];
 	$: {
