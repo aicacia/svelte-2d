@@ -16,7 +16,7 @@
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
 		"preCommit": "npm run format && npm run lint",
-		"prepare": "husky install && svelte-kit sync"
+		"prepare": "husky install"
 	},
 	"husky": {
 		"hooks": {
@@ -26,7 +26,6 @@
 	"devDependencies": {
 		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
-		"@types/gl-matrix": "3",
 		"@types/raf": "3",
 		"@typescript-eslint/eslint-plugin": "5",
 		"@typescript-eslint/parser": "5",
@@ -45,7 +44,8 @@
 		"svelte-preprocess": "4",
 		"tailwindcss": "3",
 		"tslib": "2",
-		"typescript": "4"
+		"typescript": "4",
+		"vite": "beta"
 	},
 	"dependencies": {
 		"@aicacia/range": "0",
