@@ -14,9 +14,6 @@ const config = {
 		appDir: 'internal',
 		paths: {
 			base: process.env.USE_BASE_PATH ? '/svelte-2d' : ''
-		},
-		prerender: {
-			default: true
 		}
 	}
 };

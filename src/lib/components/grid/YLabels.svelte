@@ -15,7 +15,9 @@
 		$yPanes[0][0] - separation,
 		$yPanes[$yPanes.length - 1][1] + separation,
 		separation
-	).filter((y) => Math.abs($scaleY(y) - $scaleY(0)) > 1);
+	)
+		.filter((y) => Math.abs($scaleY(y) - $scaleY(0)) > 1)
+		.toArray();
 </script>
 
 <g>

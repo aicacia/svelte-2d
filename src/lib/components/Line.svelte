@@ -26,7 +26,7 @@
 		stroke-width={weight}
 		stroke-dasharray={strokeStyle === 'dashed' ? '4,3' : undefined}
 		stroke={color}
-		stoke-opacity={strokeOpacity}
+		stroke-opacity={strokeOpacity}
 	/>
 </g>
 

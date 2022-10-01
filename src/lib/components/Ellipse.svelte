@@ -29,7 +29,7 @@
 		stroke={color}
 		fill={color}
 		fill-opacity={fillOpacity}
-		stoke-opacity={strokeOpacity}
+		stroke-opacity={strokeOpacity}
 	/></g
 >
 
