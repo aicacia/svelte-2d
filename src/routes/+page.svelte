@@ -5,12 +5,12 @@
 		Entity,
 		Transform,
 		Grid,
-		Circle,
 		Line,
 		Function,
 		onUpdate
 	} from 'svelte-2d';
 	import { vec2 } from 'gl-matrix';
+	import Image from '$lib/components/Image.svelte';
 
 	let transfrom: Transform;
 	let point = vec2.fromValues(0, 0);
@@ -32,8 +32,8 @@
 		<Rectangle width={1} height={0.5} />
 		<MovablePoint bind:point />
 	</Entity>
-	<Entity position={orbitPoint}>
-		<Circle radius={0.25} />
-	</Entity>
 	<Line start={vec2.fromValues(0, 0)} end={orbitPoint} />
+	<Entity position={orbitPoint}>
+		<Image href={'/favicon.png'} size={0.5} />
+	</Entity>
 </Entity>
