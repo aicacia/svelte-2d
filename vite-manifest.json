@@ -1,11 +1,12 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "internal/immutable/start-0dc85695.js",
+    "file": "internal/immutable/start-4e2dcfeb.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-852246c9.js",
-      "_singletons-0b94ad21.js"
+      "_index-77bcdb2e.js",
+      "_singletons-7fea94c5.js",
+      "_paths-846459bd.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -14,33 +15,34 @@
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "internal/immutable/components/pages/_layout.svelte-8cc345cb.js",
+    "file": "internal/immutable/components/pages/_layout.svelte-60120f99.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-852246c9.js",
-      "_Scene-92097db6.js"
+      "_index-77bcdb2e.js",
+      "_Scene-482f9cb7.js"
     ],
     "css": [
-      "internal/immutable/assets/_layout-1304fec6.css"
+      "internal/immutable/assets/_layout-a24793c6.css"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "internal/immutable/components/error.svelte-cea44a1c.js",
+    "file": "internal/immutable/components/error.svelte-d8a70905.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-852246c9.js",
-      "_singletons-0b94ad21.js"
+      "_index-77bcdb2e.js",
+      "_singletons-7fea94c5.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "internal/immutable/components/pages/_page.svelte-6c28d868.js",
+    "file": "internal/immutable/components/pages/_page.svelte-93bc11c2.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-852246c9.js",
-      "_Scene-92097db6.js"
+      "_index-77bcdb2e.js",
+      "_Scene-482f9cb7.js",
+      "_paths-846459bd.js"
     ],
     "css": [
       "internal/immutable/assets/_page-13add858.css"
@@ -54,19 +56,23 @@
       "__layout-c2405b24.js"
     ]
   },
-  "_singletons-0b94ad21.js": {
-    "file": "internal/immutable/chunks/singletons-0b94ad21.js",
+  "_singletons-7fea94c5.js": {
+    "file": "internal/immutable/chunks/singletons-7fea94c5.js",
     "imports": [
-      "_index-852246c9.js"
+      "_index-77bcdb2e.js",
+      "_paths-846459bd.js"
     ]
   },
-  "_index-852246c9.js": {
-    "file": "internal/immutable/chunks/index-852246c9.js"
+  "_paths-846459bd.js": {
+    "file": "internal/immutable/chunks/paths-846459bd.js"
   },
-  "_Scene-92097db6.js": {
-    "file": "internal/immutable/chunks/Scene-92097db6.js",
+  "_index-77bcdb2e.js": {
+    "file": "internal/immutable/chunks/index-77bcdb2e.js"
+  },
+  "_Scene-482f9cb7.js": {
+    "file": "internal/immutable/chunks/Scene-482f9cb7.js",
     "imports": [
-      "_index-852246c9.js"
+      "_index-77bcdb2e.js"
     ],
     "css": [
       "internal/immutable/assets/Scene-dc955aac.css"
@@ -76,7 +82,7 @@
     "file": "internal/immutable/chunks/_layout-c2405b24.js"
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "internal/immutable/chunks/0-b233ad84.js",
+    "file": "internal/immutable/chunks/0-3a569b2e.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -85,7 +91,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "internal/immutable/chunks/1-bbf130a2.js",
+    "file": "internal/immutable/chunks/1-b8847608.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -93,7 +99,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "internal/immutable/chunks/2-5c6f6aef.js",
+    "file": "internal/immutable/chunks/2-ff8454b8.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -101,7 +107,7 @@
     ]
   },
   "src/routes/+layout.css": {
-    "file": "internal/immutable/assets/_layout-1304fec6.css",
+    "file": "internal/immutable/assets/_layout-a24793c6.css",
     "src": "src/routes/+layout.css"
   },
   "Scene.css": {
