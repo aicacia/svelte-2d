@@ -15,7 +15,6 @@ export class Transform {
 		mat2d.multiply(out, Transform.getMatrix(MAT2D_0, this.parent), this.matrix);
 		return out;
 	}
-
 	addChild(child: Transform) {
 		this.children.push(child);
 		child.parent = this;

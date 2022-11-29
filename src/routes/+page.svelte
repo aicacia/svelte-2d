@@ -12,6 +12,7 @@
 	import { vec2 } from 'gl-matrix';
 	import Image from '$lib/components/Image.svelte';
 	import { base } from '$app/paths';
+	import Text from '$lib/components/Text.svelte';
 
 	let transfrom: Transform;
 	let point = vec2.fromValues(0, 0);
@@ -36,5 +37,6 @@
 	<Line start={vec2.fromValues(0, 0)} end={orbitPoint} />
 	<Entity position={orbitPoint}>
 		<Image href={`${base}/favicon.png`} size={0.5} />
+		<Text size={0.25} position={vec2.fromValues(-0.6, -0.25)}>Hello, world!</Text>
 	</Entity>
 </Entity>
