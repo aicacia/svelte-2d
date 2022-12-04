@@ -29,8 +29,8 @@
 		stroke={color}
 		fill={color}
 		fill-opacity={fillOpacity}
-		stroke-opacity={strokeOpacity}
-	/></g
+		stroke-opacity={strokeOpacity}><slot /></ellipse
+	></g
 >
 
 <style>

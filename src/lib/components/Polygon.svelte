@@ -26,8 +26,8 @@
 		stroke={color}
 		fill={color}
 		fill-opacity={fillOpacity}
-		stroke-opacity={strokeOpacity}
-	/></g
+		stroke-opacity={strokeOpacity}><slot /></polygon
+	></g
 >
 
 <style>

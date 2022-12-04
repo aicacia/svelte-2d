@@ -29,7 +29,7 @@
 
 <Entity bind:transfrom position={point}>
 	<Function fn={(x) => (x * x) / 10} />
-	<Rectangle width={1} height={1} />
+	<Rectangle width={1} height={1} radius={0.25} />
 	<Entity position={vec2.fromValues(0.5, 0.5)}>
 		<Rectangle width={1} height={0.5} />
 		<MovablePoint bind:point />

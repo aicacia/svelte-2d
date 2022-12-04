@@ -22,5 +22,5 @@
 	{weight}
 	{color}
 	{fillOpacity}
-	{...$$restProps}
-/>
+	{...$$restProps}><slot /></Ellipse
+>
