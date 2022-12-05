@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	let incrementer = 0;
 
-	const DEFAULT_AXIS_OPTIONS: Partial<IAxisOptions> = {
+	export const DEFAULT_AXIS_OPTIONS: Partial<IAxisOptions> = {
 		axis: true,
 		lines: 1,
 		labels: (x: number) => x
@@ -19,26 +19,20 @@
 
 	export let color = '#000';
 	export let subdivisions: number | false = false;
-	export let xAxis: Partial<IAxisOptions> = {
-		subdivisions,
-		...DEFAULT_AXIS_OPTIONS
-	};
-	export let yAxis: Partial<IAxisOptions> = {
-		subdivisions,
-		...DEFAULT_AXIS_OPTIONS
-	};
+	export let xAxis: Partial<IAxisOptions> = DEFAULT_AXIS_OPTIONS;
+	export let yAxis: Partial<IAxisOptions> = DEFAULT_AXIS_OPTIONS;
 
 	const id = `svelte-2d-grid-pattern-${incrementer++}`;
 
 	$: xAxisOptions = {
-		subdivisions,
 		...DEFAULT_AXIS_OPTIONS,
-		...xAxis
+		...xAxis,
+		subdivisions
 	} as IAxisOptions;
 	$: yAxisOptions = {
-		subdivisions,
 		...DEFAULT_AXIS_OPTIONS,
-		...yAxis
+		...yAxis,
+		subdivisions
 	} as IAxisOptions;
 
 	const width = getFromContext(WIDTH);

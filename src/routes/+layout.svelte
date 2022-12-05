@@ -4,10 +4,10 @@
 	import '../app.css';
 </script>
 
-<script lang="ts">
-	import Scene from '$lib/components/Scene.svelte';
-</script>
+<!-- svelte-ignore missing-declaration -->
+<svelte:head>
+	<meta name="description" content={PACKAGE_JSON.description} />
+	<meta name="keywords" content={PACKAGE_JSON.keywords.join(', ')} />
+</svelte:head>
 
-<Scene width="auto" height="auto" zoomAmount={10}>
-	<slot />
-</Scene>
+<slot />

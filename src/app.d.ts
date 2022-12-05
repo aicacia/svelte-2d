@@ -8,3 +8,9 @@ declare namespace App {
 	// interface Session {}
 	// interface Stuff {}
 }
+
+declare global {
+	const PACKAGE_JSON: typeof import('../package.json');
+}
+
+export {};

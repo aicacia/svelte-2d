@@ -164,6 +164,7 @@
 	let element: HTMLDivElement;
 
 	let startPoint = vec2.create();
+	let dragging = false;
 	function onDrag(
 		state: Omit<FullGestureState<'drag'>, 'event'> & {
 			event: PointerEvent | MouseEvent | TouchEvent | KeyboardEvent;
@@ -179,6 +180,7 @@
 		}
 		movement[1] = -movement[1];
 		offset = vec2.sub(offset, startPoint, movement);
+		dragging = state.dragging === true;
 	}
 
 	function onMouseWheel(
@@ -225,9 +227,9 @@
 	bind:offsetWidth={actualWidth}
 	bind:offsetHeight={actualHeight}
 	class="scene"
-	style={`width: ${desiredCssWidth}; height: ${desiredCssHeight}; touch-action: ${
-		pan ? 'none' : 'auto'
-	};`}
+	style="width:{desiredCssWidth};height:{desiredCssHeight};touch-action:{pan
+		? 'none'
+		: 'auto'};cursor:{dragging ? 'grabbing' : 'grab'}"
 >
 	<svg
 		width={actualWidth}

@@ -1,6 +1,7 @@
 <script lang="ts" context="module">
 	import { createContextKey, getFromContext } from '$lib/context';
 	import { mat2dToSVG } from '$lib/math';
+	import type { IAxisOptions } from '$lib/types';
 	import { range } from '@aicacia/range';
 
 	export const X_PANES = createContextKey<vec2[]>();
@@ -14,7 +15,10 @@
 	import { setContext } from 'svelte';
 	import { writable } from 'svelte/store';
 	import { INVERSE_PIXEL_MATRIX, MAX, MIN } from '../Scene.svelte';
-	import CartesianCoordinates from './CartesianCoordinates.svelte';
+	import CartesianCoordinates, { DEFAULT_AXIS_OPTIONS } from './CartesianCoordinates.svelte';
+
+	export let xAxis: Partial<IAxisOptions> = DEFAULT_AXIS_OPTIONS;
+	export let yAxis: Partial<IAxisOptions> = DEFAULT_AXIS_OPTIONS;
 
 	const min = getFromContext(MIN);
 	const max = getFromContext(MAX);
@@ -59,5 +63,5 @@
 </script>
 
 <g transform={mat2dToSVG($inversePixelMatrix)}>
-	<CartesianCoordinates />
+	<CartesianCoordinates {xAxis} {yAxis} />
 </g>
